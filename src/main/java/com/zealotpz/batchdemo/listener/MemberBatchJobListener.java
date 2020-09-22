@@ -27,7 +27,7 @@ public class MemberBatchJobListener implements JobExecutionListener {
 
     private long startTime;
 
-    @Value("${batch.phone}")
+    @Value("${batch.phone:138xxxxxx}")
     private String dingPhone;
 
 

@@ -1,0 +1,25 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: batch-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/batch-demo
+    username: root
+    password: 123456
+  rabbitmq:
+    host: 192.168.8.1
+    username: 1
+    password: 1
+    virtual-host: /
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+#  type-handlers-package: com.zealotpz.quartz.config
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.zealotpz.quartz.mapper: debug
+  file:
+    path: /Users/zealotpz/GitHub/batch-demo/log
